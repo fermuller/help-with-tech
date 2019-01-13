@@ -1,0 +1,59 @@
+
+The design of autonomous aerial vehicles such a quadrotors
+requires many inter-related competencies, 
+including 
+the choice of  the aerial vehicle's structure and sensors; 
+development and tuning of algorithms for sensor signal processing and knowledge extraction;
+and design and implementation of embedded software that 
+coordinates and executes these algorithms.
+Conventional design methods integrate these competencies using
+ad-hoc methods without systematic analysis or optimization
+of the coupling across them. This leads to significant underutilization
+of technologies, including machine learning techniques, 
+sensors, actuators, and embedded processors, resulting
+in devices that are significantly larger, less power efficient,
+and provide less capability and less reliability compared
+to what the underlying technologies and theory have the potential to provide.
+Additionally, the ad-hoc design and integration processes greatly increase
+the turnaround time to incorporate new technologies, which
+slows down advancement of the state-of-the-art in aerial vehicle
+systems.
+
+% The following text can be incorporated when we have more space
+\begin{comment}
+
+Given size and weight, area and power constraints for a quadrotor
+configuration, we ask: What is the minimal amount of information required to
+solve a specific task under these constraints?  We conceptualize an autonomous
+UAV (drone) as a collection of processes that allow it to perform a number of
+behaviors or tasks. We will study algorithmic solution to these behaviors, by
+considering the complexity of the representations involved, starting with
+simple and progressing to more complex ones.
+
+The very first competence is kinetic  stabilization (or egomotion estimation)
+which is about maintaining a stable pose for the UAV, and it involves
+estimating the quadrotor’s 6DOF pose (position and orientation) by combining
+information from all the sensors on-board. The caveat here is that this has to
+be done very fast and be reasonably robust to changes in environmental
+conditions, and the speed at which this competency has to be performed
+increases with a decrease in quadrotor size.  Next is the ability for obstacle
+avoidance. Even for small drones at high-speed, the change in momentum is large
+despite small weight – and this necessitates the need for high-speed robust
+obstacle avoidance.  The next competence is homing, i.e., the capability to
+find a specific location in an environment. Avoiding a reconstruction of the
+scene, this involves maintaining a qualitative representation of a map.  In its
+most basic form, one could just maintain a vector which points towards the home
+(homing vector). We will study different representations and their
+implementation in neural networks.  Even more complex are two other
+capabilities. One is the ability to land (on a static or a dynamic surface).
+This is required to dock onto a platform either for charging or safe landing. A
+special case of landing would be to minimize crash impact or avoid certain
+areas in case of an inevitable crash. This also involves failure tolerant
+control. The other capability is to pursue or escape from other agents, which
+involves prediction of their movements and online reactive control.
+
+These above competences form a hierarchy, with each competence needing the one before it. It involves a sensorimotor loop which combines perception, planning, and control into one entity. Thus, it dictates a synergistic hardware and software architectural co-design for autonomous operation. 
+
+Some of the hardware design questions which will be answered in this work are: What kind of cameras should we use – traditional frame-based or event-based? Should we use a cheap TOF sensor to accompany a camera? Should we use a micro-controller to pre-process the stereo stream to make the data bandwidth low? What is the best way to distribute computing in software and hardware?
+
+\end{comment}

@@ -1,0 +1,63 @@
+The goal of this work is to develop a framework for co-design that describes
+aerial robotic design problems, defined as tuples of ''functionality space'',
+''implementation space'', and ''resources space.'' To make the problem solvable, we will impose constraints on the resources: the SWAP constraints (such as the maximum size, weight and configuration of rotors) and constraints on the computing resources (maximum available memory). Given a set of tasks (functionality), we then can ask: {\it a) Is an implementation (involving software design and realization in embedded hardware) possible? b)  What is the implementation using minimal amount of information to solve the tasks given the resource constraints?}
+
+
+%Our approach consists of two layers. Integrated modeling, analysis and
+%optimization across these layers is a major  distinguishing aspect
+%of our proposed research. 
+%The first layer is concerned with the design of the drone hardware and sensors,
+%including
+%the frame of the drone, vision sensors, inertial measurement
+%unit (IMU), and flight controller. The first layer is
+%also concerned with the
+%development of algorithms to achieve a set of mission tasks.
+%The second layer is concerned with the realization of these algorithms in
+%embedded processors and development of tools for the design and implementation
+%of these multicore machine learning and signal processing applications.
+
+
+Technical work involves: a) the  design  of  the  drone  hardware  and  sensors and the development of algorithms using the information from the sensors  to achieve a set of mission tasks; b) the realization of these algorithms in embedded processors and development of tools for the design and implementation of these multicore machine learning and signal processing applications. Integrated modeling, analysis and optimization across the different components  is  a  major  distinguishing  aspect  of  our  proposed  research
+
+Figure~\ref{fig:flow} illustrates the new design methodology
+that will be developed in the proposed project for the
+specific Embodied AI application area of Drone-Level Codesign.
+Major research efforts and deliverables
+of the project are represented by the
+blocks labeled Platform-aware algorithms, 
+Parameterized libraries of algorithmic modules, 
+Tools to map algorithms onto embedded processors,
+and
+Run-time system to coordinate algorithm configurations and hardware subsystems.
+Our research will center around the integrated development of novel algorithms, 
+libraries and software tools across these project components.
+
+
+As a unifying formalism to promote systematic analysis and optimization across
+the developed algorithms, libraries and tools, we will apply the paradigm of
+dataflow-based modeling of signal and information processing systems (e.g.,
+see~\cite{bhat2019x1}).
+%\cite{lee1995x1, bhat2019x1}).
+ Dataflow is widely-used in commercial,
+domain-specific tools for signal and information processing, such as LabVIEW by
+National Instruments, SystemVue by Keysight, and TensorFlow by Google. Our
+prior research has influenced significant aspects of important commercial
+dataflow tools (e.g., see~\cite{hsu2011x1, kee2012x2}). However, revolutionary
+and strongly interdisciplinary advances are needed to dataflow methods to
+address the complex challenges described in Section~\ref{sec:context}. We will
+develop such advances as a core component of this project. More specifically,
+our project will lead to new fundamental understandings among the areas of
+dataflow, machine learning, and cyber-physical system design.  The results of
+the proposed seed project will help to demonstrate our proposed vision of
+Embodied AI with concrete simulation experiments in the context of Drone-level
+Codesign.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6.4in]
+{figures/drone-codesign-flowchart.eps}
+\caption {An illustration of the proposed new design methodology
+for Embodied AI.}
+\label{fig:flow}
+\end{figure}
+

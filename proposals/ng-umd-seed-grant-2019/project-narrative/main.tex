@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+% \usepackage{cite}
+\usepackage{epsfig}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+% See https://texblog.org/2011/09/30/quick-note-on-line-spacing/
+
+
+% \oddsidemargin=1.0in
+% \evensidemargin=1.0in
+% \textwidth=6.5in
+% \topmargin=1.0in
+% \textheight=9.0in
+% \addtolength{\oddsidemargin}{-0.875in}
+% \addtolength{\evensidemargin}{-0.875in}
+% \addtolength{\textwidth}{1.5in}
+% \addtolength{\topmargin}{-0.875in}
+% \addtolength{\textheight}{1.5in}
+
+% \setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+% \pagestyle{myheadings}
+
+\lhead{NG-UMD Seed Grant Proposal}
+\rhead{Co-design of Structure and Intelligence}
+% \rfoot{\thepage}
+
+\parindent=0.3in
+\parskip=0in
+% \pagestyle{plain} 
+% \markright{hello}
+
+
+\begin{document}
+
+% Some useful instructions:
+% \clearpage
+% {\bf Quizzes:} 
+% \gotable{0}{1}{rlp{.1in}rl}
+% {\bf Instructor:} & Laura Taalman 		 
+% && {\bf Office:}   & 020 Math/Physics \\
+% {\bf Telephone:}  & 660-2829 (W), 220-1359 (H) 
+% && {\bf E-mail:}   & taal@math.duke.edu \\
+% \stoptable
+% \input{macros}
+
+\begin{center}
+\begin{spacing}{1.8}
+{\Large\textbf{Co-design of Structure and Intelligence
+for Embedded System Optimization}}\par
+\end{spacing}
+\vspace{.06in}
+{\sc  Proposal to the Northrop Grumman -- UMD Seed Grant Program}\\
+\vspace{.06in}
+Principal Investigators: Shuvra S.\ Bhattacharyya\textsuperscript{1,2} and 
+Cornelia Ferm\"{u}ller\textsuperscript{1}\\
+\vspace{0.06in}
+1. Institute for Advanced Computer Studies (UMIACS)\\
+2. Department of Electrical and Computer Engineering\\
+\vspace{0.06in}
+University of Maryland  of Maryland, College Park\\ 
+Web: 
+\url{http://users.umiacs.umd.edu/~fer/}, \url{http://www.ece.umd.edu/~ssb}\\
+Email: \url{ssb@umd.edu}, \url{fer@umiacs.umd.edu}\\
+\vspace{0.06in}
+\today
+\end{center}
+
+\vspace{.14in}
+\begin{abstract}
+
+A challenge in modern engineering is to design complex embedded systems with
+task specifications in a rigorous way with guarantees on correct operation, and
+optimization of relevant implementation metrics, including processing speed,
+power consumption, and memory requirements. We propose to develop foundations
+for automated synthesis of embedded agents, and aerial robotics in particular.
+Given a set of tasks and constraints on the size, weight and power of the
+quadrotor, we propose to develop models and methods for synthesizing the
+quadrotor platform. This includes the integrated selection of sensing and
+embodied processing devices; the development of algorithms for control and
+signal processing, which we study in the spirit of Active Perception as a
+coupled entity; and the autogeneration of optimized software for embedded
+devices. The developed algorithms and synthesized software
+will be designed to reliably carry out a specified mission under
+given constraints, and to adapt autonomously based on
+changing characteristics in the operational environment. Through the novel models, methods and simulations developed in this
+seed project, we will develop preliminary results and interdisciplinary
+experience to support proposed new research on algorithms and software tools
+for automated synthesis and optimization of embedded agents. 
+%We will build on
+%this foundation to develop proposals to major funding agencies, such as AFOSR,
+%DARPA, and NSF.
+
+\end{abstract}
+
+\section{Context}
+\label{sec:context}
+\input{sec-context}
+
+\section{Intellectual Merit}
+\label{sec:merit}
+\input{sec-merit}
+
+\section{Technical Approach}
+\label{sec:approach}
+\input{sec-approach}
+
+\section{Alignment with Goals of Seed Grant Program}
+\label{sec:alignment}
+\input{sec-alignment}
+
+\section{Potential for Leveraging Proposed Work}
+\label{sec:potential}
+\input{sec-potential}
+
+% \section{Demonstration Plan}
+% \label{sec:demo}
+% \input{sec-demo}
+
+% Figure example 1:
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=150mm]{figures/design-flow/design-flow.eps}
+% \caption {Insert caption text here.}
+% \label{fig:flow}
+% \end{figure}
+
+% Figure example 2:
+% \begin{figure}
+% \centering 
+% \epsfig {file=./figures/network-diagram.pdf}
+% \caption{Illustration of an application scenario.} 
+% \label{fig:network} 
+% \end{figure}	
+
+\bibliographystyle{IEEEtran} 
+\bibliography{refs}
+
+% Some of these references are available online at \\
+% \centerline{{\tt http://www.ece.umd.edu/DSPCAD/papers/contents.html}.}
+
+\end{document}

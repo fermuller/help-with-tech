@@ -1,0 +1,58 @@
+To address the problem motivated in the previous section, we propose a holistic
+investigation into the design and implementation of autonomous aerial vehicles.
+In particular, we propose to develop algorithms, methodologies and software
+tools for the design of quadrotors with different size and task constraints
+that jointly consider the physical characteristics 
+of the sensing devices, and embedded processing devices, along with embedded
+software characteristics of the algorithms for machine learning, control and
+signal processing, as they are realized on the embedded processing hardware.
+This multidimensional optimization problem encompasses different strata,
+including hardware, integrated chips, sensors, effectors and software -- the
+set of programs running on the system, the   representations computed by these programs, and their efficient and reliable
+implementation on the processing hardware. 
+
+Holistic system modeling and optimization across these strata is a new research
+area that has the potential to lead to disruptive design methodologies and
+tools for aerial vehicles that serve mission-critical applications.  We call
+this field ``Embodied AI''. While we propose to study Embodied AI in the
+context of aerial vehicles, the concept has much broader applicability to other
+types of cyber-physical systems.
+
+We are interested in creating quadrotors with perception that autonomously
+perform tasks in different environments.  The current approach in Robotics is
+to use Computer Vision modules that aim to build a 3D representation of the
+scene that is of general utility, generally with the so-called
+simultaneous localization and mapping (SLAM) approach. Using this
+representation, tasks are planned and accomplished to allow the quadrotor to
+demonstrate autonomous behavior. However, SLAM approaches are computationally
+very expensive, and  inefficient for aerial robots. To solve
+many tasks, we don't need accurate 3D models.
+
+We can take inspiration from biology. Insects and birds have solved the problem
+of navigation and complex control without the need for building accurate 3D
+maps of the scene. Their solutions are task driven.  Biological systems have
+developed through evolution, and in this process their hardware (body, and
+sensing devices) and software (brains) have co-evolved. For example, bees have
+compound eyes, with a large field of view but of low resolution, which are
+suited for high speed navigation with low computational cost --- as is evident
+from the small amount of neurons in the bee's brain. Birds of prey, such as the
+eagle, have large field of view eyes but also accurate vision to achieve both
+agile flight and accurate recognition and tracking of prey, and this requires
+much larger brains.  Similarly, in the engineering domain, while sensors like
+LIDAR, RGB-D cameras or stereo cameras can make depth perception easier, they
+may not be feasible on smaller robots due to Size, Weight, Area and Power (SWAP) 
+constraints. Instead simpler representations when coupled directly with the control of the drone may be sufficient to solve certain tasks. For example, we may not need depth, but only image motion from lightweight cameras to avoid obstacles. 
+
+The most distinguishing aspects of this research stem from our
+interdisciplinary collaboration across the areas of computer vision, robotics,
+and embedded signal processing.  In our work on platform-aware algorithms, and
+parameterized libraries of algorithmic modules, we will build on our experience in computational motion analysis and visual servoing (e.g., see~\cite{ji2006x1,
+barr2014x1, mitr2018x1}).
+In our work on tools to map algorithms onto embedded processors, and run-time
+techniques to coordinate algorithm configurations and hardware subsystems, we
+will apply our experience in model-based architectures and design tools for
+signal and information processing systems (e.g., see~\cite{bens2016x2,
+bhat2019x1, bout2018x2}).
+
+
+
